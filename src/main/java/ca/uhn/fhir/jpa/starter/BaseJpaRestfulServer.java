@@ -238,6 +238,7 @@ public class BaseJpaRestfulServer extends RestfulServer {
       config.addAllowedHeader("x-fhir-starter");
       config.addAllowedHeader("X-Requested-With");
       config.addAllowedHeader("Prefer");
+      config.addAllowedHeader("x-cascade");
       String allAllowedCORSOrigins = HapiProperties.getCorsAllowedOrigin();
       Arrays.stream(allAllowedCORSOrigins.split(",")).forEach(o -> {
         config.addAllowedOrigin(o);
